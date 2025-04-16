@@ -12,7 +12,7 @@ Questa applicazione web, consente all'utente di cercare una parola in inglese e 
 - Free Dictionary API
 - Tanstack / React-Query
 
-# Immagini:
+# Immagini
 
 ![Landing](public/screenshots/landing.png)
 
