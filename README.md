@@ -14,6 +14,6 @@ Questa applicazione web, consente all'utente di cercare una parola in inglese e 
 
 # Immagini:
 
-[!Landing](public/screenshots/landing.png)
+![Landing](public/screenshots/landing.png)
 
-[!WordCard](public/screenshots/wordCard.png)
+![WordCard](public/screenshots/wordCard.png)
