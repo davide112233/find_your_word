@@ -1,7 +1,11 @@
+"use client";
+
 import "./globals.css";
 import DOMPurify from "isomorphic-dompurify";
 import { metadata } from "./utils/metaData";
 import { Inter } from 'next/font/google'
+import { QueryClientProvider } from "@tanstack/react-query";
+import { queryClient } from "./utils/queryClient";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -22,7 +26,9 @@ export default function RootLayout({ children }) {
         <meta name="type" content={DOMPurify.sanitize(metadata.type)} />
       </head>
       <body className={inter.className}>
-        {children}
+        <QueryClientProvider client={queryClient}>
+          {children}
+        </QueryClientProvider>
       </body>
     </html>
   );

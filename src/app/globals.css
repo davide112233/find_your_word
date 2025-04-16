@@ -21,12 +21,16 @@ body {
 }
 
 .navigation-bar {
-    @apply p-5 shadow-md;
     background-color: var(--primary);
+    color: var(--accent);
+    @apply p-5 shadow-lg;
 }
 
 .navbar-brand {
-    @apply uppercase 2xl:text-2xl text-xl tracking-wide;
+    @apply 2xl:text-2xl text-xl uppercase;
+}
+
+.burger-button {
     color: var(--accent);
 }
 
@@ -34,20 +38,36 @@ button {
     @apply cursor-pointer;
 }
 
-.search-word-form-box {
-    @apply flex justify-center 2xl:p-5 mt-2;
+.search-word-form {
+    @apply flex flex-wrap justify-center 2xl:gap-5 gap-3;
 }
 
-.search-word-form {
-    @apply flex flex-wrap 2xl:gap-5 gap-3 2xl:justify-between justify-center items-center 2xl:p-0 p-3;
+input[type="text"] {
+    background-color: var(--primary);
+    border-color: var(--accent);
+}
+
+input[type="text"]:focus {
+    color: var(--accent);
 }
 
 .search-word-form input[type="text"] {
-    @apply w-80;
+    @apply w-72 shadow-lg capitalize;
+}
+
+.search-word-form button {
+    background-color: var(--accent);
+    color: var(--background);
+    @apply text-center text-lg capitalize;
 }
 
 .word-card-box {
-    @apply flex justify-center 2xl:p-0 p-5;
+    @apply flex justify-center p-5 mt-3;
+}
+
+.word-card {
+    @apply max-w-sm border-0 shadow-sm;
+    background-color: var(--primary);
 }
 
 .close-card-button-box {
@@ -56,5 +76,8 @@ button {
 
 .close-card-button {
     @apply text-2xl;
-    color: var(--background);
+}
+
+.word-card-meaning {
+    color: var(--accent);
 }

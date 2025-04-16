@@ -1,5 +1,4 @@
 import { NavigationBar } from "./components/navigationBar";
-import SearchWordForm from "./components/searchWordForm";
 import { WordCard } from "./components/wordCard";
 
 export default function Home() {
@@ -7,7 +6,6 @@ export default function Home() {
     <>
       <NavigationBar />
       <main>
-        <SearchWordForm />
         <WordCard />
       </main>
     </>
