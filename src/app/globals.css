@@ -1,26 +1,60 @@
 @import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../../.flowbite-react/class-list.json";
+
+* {
+    transition: all 1s ease-in-out;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --primary: #faebd7;
+    --accent: black;
+    --background: #f8f8ff;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html, body {
+    @apply overflow-x-hidden scroll-smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+}
+
+.navigation-bar {
+    @apply p-5 shadow-md;
+    background-color: var(--primary);
+}
+
+.navbar-brand {
+    @apply uppercase 2xl:text-2xl text-xl tracking-wide;
+    color: var(--accent);
+}
+
+button {
+    @apply cursor-pointer;
+}
+
+.search-word-form-box {
+    @apply flex justify-center 2xl:p-5 mt-2;
+}
+
+.search-word-form {
+    @apply flex flex-wrap 2xl:gap-5 gap-3 2xl:justify-between justify-center items-center 2xl:p-0 p-3;
+}
+
+.search-word-form input[type="text"] {
+    @apply w-80;
+}
+
+.word-card-box {
+    @apply flex justify-center 2xl:p-0 p-5;
+}
+
+.close-card-button-box {
+    @apply flex justify-end;
+}
+
+.close-card-button {
+    @apply text-2xl;
+    color: var(--background);
 }
